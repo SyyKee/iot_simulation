@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script type="text/javascript" src="sender.js"></script>
+    <script type="text/javascript" src="extract.js"></script>
+    <link rel="stylesheet" href="styless.css">
+    <title>Admin panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Webreathe</h2>
+            </div>
+            <div class="search">
+                <input type="text" name="search" placeholder="search here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="img/user.png" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>Analytics</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div>Settings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <div>Help</div>
+                    </a>
+                </li>
+                <li id ="generer" >
+                    <a href="#">
+                        <i class="fas fa-random"></i>
+                        <div id="generer" onclick="sender()">Generer</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">63%</div>
+                        <div class="card-name">Humidité</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-humidity"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id="vent" class="number">86 Km/h</div>
+                        <div class="card-name">Vent</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">4</div>
+                        <div class="card-name">Capteurs</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id ="panne" class="number-en-panne">Actif</div>
+                        <div class="card-name">Activité</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div id ="chart" class="chart">
+                    <h2>Temperature et pression</h2>
+                    <div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <div id ="chart doughnut-chart" class="chart doughnut-chart">
+                    <h2>Taux de carbon</h2>
+                    <div>
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chartdonut.js"></script>
+    <script src="enpanne.js"></script>
+    <script src="vent.js"></script>
+</body>
+
+</html>
